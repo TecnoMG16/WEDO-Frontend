@@ -1,0 +1,457 @@
+@font-face {
+    font-family: 'Agrandir';
+    src: url('./Recursos/Font/Agrandir-GrandHeavy.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Agrandir-regular';
+    src: url('./Recursos/Font/Agrandir-Regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Agrandir';
+    
+}
+
+h1{
+    color: #fff;
+}
+
+h2{
+    color: #fff;
+}
+
+h3{
+    color: #fff;
+}
+
+p{
+    color: #fff;
+}
+
+body {
+    min-width: 100vw;
+    background-size: cover;
+    background-image: url(/Recursos/Imagenes/Inicio.jpg);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Rellena todo el contenedor, recortando el video si es necesario */
+  }
+
+/* navbar */
+
+.hero {
+    position: relative; /* Esto es crucial para posicionar elementos dentro del banner */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  
+    z-index: 1;
+}
+
+.hero video {
+    /* Estilos para el video */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para cubrir toda el área */
+    z-index: -1; /* Coloca el video detrás de otros elementos */
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(225, 225, 225, 0.075);
+    backdrop-filter: blur(15px);
+    border: 2px solid transparent; /* Establecemos un borde transparente para que podamos aplicar el degradado */
+    border-image: linear-gradient(to right, #203730, #FD76F7) 2; /* Creamos el degradado lineal y lo aplicamos al borde */
+    z-index: 1;
+}
+
+.logo {
+    width: 10em;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    color: #9EF349;
+}
+
+/*underline animation*/
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9EF349;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+/* Contenido */
+
+.content {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 70px;
+    position: absolute;
+    color: #fff;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.content h1 {
+    margin-top: 200px;
+    font-size: 50px;
+    font-weight: 100%;
+    height: 100%;
+    max-width: 200px;
+    margin-bottom: 1rem;
+    min-width: 100px;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+button {
+    width: 200px;
+    height: 44px;
+    padding: 20px;
+    margin: 20px 5px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 1rem; /* espacio superior entre el boton y el texto */
+    padding: 0.7rem 1rem; /* espacio interno del boton */
+}
+
+.introduccion {
+    margin: 145px;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 120px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info h1{
+    font-size: 60px;
+    max-width: 500px;
+}
+
+.info p {
+    margin-top: 5px;
+    margin-left: 30px;
+    max-width: 900px;
+    font-family: 'Agrandir-regular';
+    font-size: 25px;
+    line-height: 1.5; /* Ajustamos el espaciado entre líneas */
+}
+
+.container {
+    position: relative;
+    padding: 20px;
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en líneas nuevas */
+    justify-content: center; 
+}
+
+.card {
+    position: absolute;
+    transform: scale(1.3);
+    width: 200px;
+    height: 200px;
+    flex: 1; /* Permite que las tarjetas ocupen todo el espacio disponible */
+    margin: 10px;
+}
+
+.card-left {
+    left: 140px;
+}
+
+.card-right {
+    margin-top: 75px;
+    right: 990px;
+    z-index: 1;
+}
+
+.tarjeta {
+    margin-top: 35%;
+}
+
+.tarjetaIA {
+    box-sizing: border-box;
+    display: flex;
+   flex-direction: row;
+    background-color: #E5E2E2;
+    margin: 0px 450px;
+    border-radius: 25px;
+    height: 253px;
+    max-width: 90%;
+    transform: scale(1.3);
+  align-items: center;
+  text-align: center;
+}
+
+.IA {
+    box-sizing: border-box;
+    margin: 10px;
+    margin-left: 55px;
+    border-radius: 25px;
+    height: 230px;
+    width: 230px;
+}
+
+.IA2{
+    box-sizing: border-box;
+    height: 180px;
+    width: 230px;
+    margin: 60px 5px;
+    border-radius: 25px;
+}
+
+.tarjetaIA h2 {
+    font-family: 'Agrandir-regular';
+    margin: 55px 40px;
+    max-width: 550px;
+}
+
+.img {
+    margin-left:170px;
+    max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.beneficios {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 300px 100px;
+    padding: 50px;
+}
+
+.text {
+    margin-left: 5%;
+    font-size: 45px;
+    max-width: 55%;
+}
+
+.text p{
+    font-family: 'Agrandir-regular';
+    font-size: 25px;
+}
+
+.list {
+    box-sizing: border-box;
+    margin: 100px;
+    justify-content: space-between;
+    font-size: 35px;
+}
+
+.lista {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin: 25px;
+    padding: 30px;
+}
+
+.lista2 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin: 50px 25px;
+    padding: 30px;
+}
+
+.lista3 {
+    margin-left: 450px;
+}
+
+.img-division {
+    box-sizing: border-box;
+    
+}
+
+.fibra {
+    height: 400px;
+    width: 100%;
+}
+
+.pasos-info {
+    display: flex;
+    box-sizing: border-box;
+    margin: 5% 10%;
+}
+
+.texto h1 {
+    font-size: 60px;
+    max-width: 400px;
+    margin-top: 25px;
+    margin-bottom: 15px; /* Ajustamos el margen inferior */
+}
+
+.contenedor-texto {
+    box-sizing: border-box;
+    display: flex;
+}
+
+.contenedor-texto p {
+    font-family: 'Agrandir-regular';
+    margin-top: 10px;
+    font-size: 40px;
+    line-height: 1.5; /* Ajusta el espaciado entre líneas */
+}
+
+.contenedor-imagenLP {
+    display: flex;
+    margin-right: 17%;
+    align-items: center; /* Alinea la imagen verticalmente con el texto */
+    max-width: 50%; /* Aumenta el tamaño del contenedor de la imagen (ajusta el valor si necesitas más) */
+}
+
+.imagenLP img {
+    top: 5%;
+    max-width: 400%; /* Aumenta el tamaño de la imagen respecto a su contenedor */
+    height: auto; /* Mantiene la proporción correcta */
+    margin-right: 25%;
+}
+
+.inicia {
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 5%; /* Espacio entre los elementos */
+}
+
+.ficha {
+    display: flex; /* Permite alinear la imagen */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    transform: scale(1.5);
+    margin: 5%;
+}
+
+/* Ubicación específica de cada imagen en el grid */
+.img1 {
+    grid-column: 1; /* Columna 1 */
+    grid-row: 1; /* Fila 1 */
+}
+
+.img2 {
+    grid-column: 2; /* Columna 2 */
+    grid-row: 2; /* Fila 2 */
+}
+
+.img3 {
+    grid-column: 1; /* Columna 1 */
+    grid-row: 3; /* Fila 3 */
+}
+
+.img4 {
+    grid-column: 2; /* Columna 2 */
+    grid-row: 4; /* Fila 4 */
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+
+    width: 100%;
+    background-color: rgba(225, 225, 225, 0.075);
+    backdrop-filter: blur(15px);
+    border: 2px solid transparent; /* Establecemos un borde transparente para que podamos aplicar el degradado */
+    border-image: linear-gradient(to right, #203730, #FD76F7) 2; 
+}
+
+.icono {
+    margin-bottom: 1.0%;
+}
+
+.creditos {
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .card {
+      flex-basis: 100%; /* Hace que cada tarjeta ocupe el 100% del ancho en pantallas pequeñas */
+    }
+
+    .introduccion {
+        font-size: 20px;
+    }
+  }
+

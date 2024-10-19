@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso 1</title>
+    <link rel="stylesheet" href="/paso1.css">
+</head>
+<body>
+    <div class="navbar">
+        <img class="logo" src="/Recursos/Iconos/Formato para pantalla/png/Icono-WEDO.png">
+        <ul>
+            <li>
+
+                <a class="hover-underline-animation" href="Index.html">Inicio</a>
+                <a class="hover-underline-animation" href="#">Sobre Nosostros</a>
+                <a class="hover-underline-animation" href="#">Contacto</a>
+            </li>
+        </ul>
+    </div>
+    <div class="titulo">
+        <div class="potencial">
+            <h1>
+                POTENCIAL DE <span style="color: #9ef349;" >MERCADO</span>
+            </h1>
+        </div>
+        
+        <p>
+            El primer paso es evaluar, que implica analizar la demanda existente y futura para el producto o servicio que se ofrecerá
+        </p>
+    </div>
+    
+
+<div class="imagenes_grid">
+    <img class="imag" src="/Recursos/Imagenes/muslim-7520627_1280.jpg">
+    <img class="imag" src="/Recursos/Imagenes/woman-4290855_1280.jpg">
+    <img class="imag" src="/Recursos/Imagenes/trading-8774164_1280 (1).jpg">
+</div>
+
+<div class="datos">
+    <h3>Ingresa los datos:</h3>
+</div>
+<section class="formulario">
+            <div class="container">
+            
+                <div class="Servicio">
+                    <label class="servicio" for="nombre">Nombre del servicio o producto:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+
+                <div class="Frecuencia">
+                    <label for="frecuencia">Frecuencia de compra anual:</label>
+                    <input type="number" id="frecuencia" name="frecuencia">
+                </div>
+                
+                <div class="Cantidad">
+                    <label for="cantidad">Cantidad de producto que compra:</label>
+                    <input type="number" id="cantidad" name="cantidad">
+                </div>
+
+                <div class="Precio">
+                    <label for="precio">Precio promedio de lo que compra:</label>
+                    <input type="number" id="precio" name="precio">
+                </div>
+                
+                <div class="botong">
+                    <button type="button" onclick="calcularConsumoAnual()">Calcular</button>
+                </div>
+
+            <div class="resultado">
+                <h3>Resultado:</h3>
+                    <p>Consumo anual en córdobas: <span class="consumo" id="consumo"></span></p>
+                </div>
+            </div>
+
+        <script src="script.js"></script>
+</section>
+
+<div class="siguiente">
+    <button>
+        <a href="paso2.html">Siguiente paso→</a>
+    </button>
+</div>
+
+<footer id="pie_pagina" >
+    <div class="icono">
+        <a href="#"><img src="/Recursos/Iconos/Formato para pantalla/png/Icono-WEDO.png"></a>
+    </div>
+    <div class="creditos">
+        <p>&copy; Desarrollado por BOOMERANG</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

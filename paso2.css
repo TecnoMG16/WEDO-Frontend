@@ -1,0 +1,267 @@
+@font-face {
+    font-family: 'Agrandir';
+    src: url('./Recursos/Font/Agrandir-GrandHeavy.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Agrandir-regular';
+    src: url('./Recursos/Font/Agrandir-Regular.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Agrandir';
+    color: #fff;
+}
+
+body {
+    min-width: 100vw;
+    background-size: cover;
+    background-image: url(/Recursos/Imagenes/Inicio.jpg);
+
+    overflow-y: scroll;
+}
+
+label {
+    color: black;
+}
+
+input {
+    color: black;
+}
+
+.navbar {
+    width: 100%;
+    height: 5%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(225, 225, 225, 0.075);
+    backdrop-filter: blur(15px);
+    border: 2px solid transparent; /* Establecemos un borde transparente para que podamos aplicar el degradado */
+    border-image: linear-gradient(to right, #203730, #FD76F7) 2; /* Creamos el degradado lineal y lo aplicamos al borde */
+    
+}
+
+.logo {
+    width: 160px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    color: #9EF349;
+}
+
+/*underline animation*/
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #9EF349;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+.titulo {
+    margin-top: 10%;
+    margin-left: 45%;
+}
+
+.inversion h1{
+    text-align: end;
+    font-size: 40px;
+    max-width: 850px;
+}
+
+.segundoPS p {
+    font-family: 'Agrandir-regular';
+    max-width: 70%;
+    margin-left: 20%;
+    margin-top: 60px;
+    font-size: 25px;
+    text-align: end;
+}
+
+.division {
+    margin: 10% 13%;
+    transform: scaleX(1.2);
+}
+
+/* FORMULARIO */
+
+.formulario {
+    background-color: #E9E3E3;
+    margin: 15% 10%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    
+}
+
+.container {
+    box-sizing: border-box;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 5%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.container label {
+    margin: 15% 5%;
+}
+
+.container input {
+    margin: 8% 5%;
+    padding: 2%;
+}
+
+.datos {
+    position: absolute;
+    margin-left: 6%;
+    margin-top: 1%;
+    color: black; 
+
+}
+
+.botong button{
+    cursor: pointer;
+    height: 60px;
+    width: 160px;
+    margin-left: 38%;
+    border-radius: 50px;
+    background-color: #932DE2;
+    box-shadow: 3px 2px rgb(46, 45, 45);       
+}
+
+.resultado {
+    margin-left: 20%;
+    grid-column: 2;
+    grid-row: 4;
+    
+}
+
+.resultado h3 {
+    text-align: start;
+    margin-left: 12%;
+    margin-top: 5%;
+}
+
+.resultado p{
+    margin-top: 5%;
+    text-align: center;
+}
+
+input {
+    border-radius: 25px;
+    border: none;
+    box-shadow: 3px 2px rgb(46, 45, 45);
+}
+
+.datos {
+    margin-left: 11%;
+}
+
+.Clasificacion {
+    margin-left: 15%;
+}
+
+.Nombre {
+    margin-left: 27%;
+}
+
+.Costo {
+    margin-left: 15%;
+}
+
+.Cantidad {
+    margin-left: 15%;
+}
+
+.Años {
+    margin-left: 15%;
+}
+
+.resultado {
+    background-color: #fff;
+    height: 120px;
+    width: 600px;
+    border-radius: 25px;
+    box-shadow: 6px 3px rgb(46, 45, 45);
+}
+
+.resultado h3{
+    color: #000000;
+}
+
+.resultado p {
+    color: #932DE2;
+}
+
+.consumo {
+    color: #000000;
+    margin-left: 2%;
+}
+
+/* footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    padding: 20px;
+
+    width: 100%;
+    background-color: rgba(225, 225, 225, 0.075);
+    backdrop-filter: blur(15px);
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #203730, #FD76F7) 2; 
+}
+
+.icono {
+    margin-bottom: 1.0%;
+}
+
+.creditos {
+    margin-top: 5px;
+    color: #fff;
+} */

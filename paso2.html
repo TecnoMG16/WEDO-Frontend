@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso2</title>
+    <link rel="stylesheet" href="/paso2.css">
+</head>
+<body>
+    <div id="Navbar" class="navbar">
+        <img class="logo" src="/Recursos/Iconos/Formato para pantalla/png/Icono-WEDO.png">
+        <ul>
+            <li>
+                <a class="hover-underline-animation" href="Index.html">Inicio</a>
+                <a class="hover-underline-animation" href="#">Sobre Nosostros</a>
+                <a class="hover-underline-animation" href="#">Contacto</a>
+            </li>
+        </ul>
+    </div>
+    <div class="titulo">
+        <div class="inversion">
+            <h1>INVERSIÓN EN ACTIVOS <span style="color: #9EF349;">Y GASTOS DE OPERACIÓN MENSUAL</span></h1>   
+        </div>
+    </div>
+    <div class="segundoPS">
+        <p>Segundo paso, la inversión de activos en un plan de negocio es una parte crucial que muestra cómo una empresa planea asignar recursos para construir y mantener la infraestructura y las herramientas necesarias para alcanzar sus metas estratégicas y operativas.
+        </p> 
+    </div>
+
+    <div class="division">
+        <img src="/Recursos/Imagenes/Rectangle 40.png" alt="">
+    </div>
+
+    <section class="formulario">
+        <h2 class="datos">Inserta los gastos del activo:</h2>
+            <div class="container">
+                
+                    <div class="Clasificacion">
+                        <label class="clasificacion" for="clasificacion">Clasificación del activo:</label>
+                        <input type="text" id="clasificacion" name="clasificacion">
+                    </div>
+    
+                    <div class="Nombre">
+                        <label class="Nactivo" for="nombre">Nombre del activo:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    
+                    <div class="Costo">
+                        <label for="costo">Costo unitario:</label>
+                        <input type="number" id="costo" name="costo">
+                    </div>
+    
+                    <div class="Cantidad">
+                        <label for="cantidad">Cantidad necesaria:</label>
+                        <input type="number" id="cantidad" name="cantidad">
+                    </div>
+
+                    <div class="botong">
+                        <button type="button" onclick="calcularCostoMensual()">Calcular</button>
+                    </div>
+
+                    <div class="Años">
+                        <label for="años">Años de vida util:</label>
+                        <input type="number" id="años" name="años">
+                    </div>
+                </div>
+
+                <div class="resultado">
+                    <h3>Resultado:</h3>
+                        <p>Consumo anual en córdobas: <span style="color: black;" id="consumoA"></span></p>
+                    </div>
+            </div>
+            <script src="script.js"></script>
+    </section>
+    
+
+</body>
+<!-- <footer>
+    <div class="icono">
+        <a href="#"><img src="/Recursos/Iconos/Formato para pantalla/png/Icono-WEDO.png"></a>
+    </div>
+    <div class="creditos">
+        <p>&copy; Desarrollado por BOOMERANG</p>
+    </div>
+</footer> -->
+</html>
